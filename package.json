@@ -12,9 +12,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "playwright test",
-    "lint": "eslint . --fix",
-	"setup:git-hooks": "git config core.hooksPath .git-hooks",
-    "postinstall": "npm run setup:git-hooks"
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "vue": "^3.5.18"
