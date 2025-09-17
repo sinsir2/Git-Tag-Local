@@ -1,2 +1,2 @@
 # #!/bin/bash
-node ./scripts/version-bump-2.js
+node ../.git-tag/version-bump.js
