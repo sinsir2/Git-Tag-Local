@@ -57,6 +57,7 @@ function main() {
   	process.exit(0);
   }
   const lastTag = getLastTag();
+  const commitMsg = run("git log -1 --pretty=%B").trim();
   const newTag = bumpVersion(lastTag, commitMsg);
   if (newTag) {
     createTag(newTag);
