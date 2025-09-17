@@ -30,18 +30,18 @@ function bumpVersion(lastTag, commitMsg) {
   const msg = commitMsg.trim();
 
   
-  // if (/^breaking/i.test(msg)) {
-  //   major++;
-  //   minor = 0;
-  //   patch = 0;
-  // } else if (/^feat/i.test(msg)) {
-	//   minor++;
-  //   patch = 0;
-  // } else if (/^fix/i.test(msg)) {
-	//   patch++;
-  // } else {
-	//   return null;
-  // }
+  if (/^breaking/i.test(msg)) {
+    major++;
+    minor = 0;
+    patch = 0;
+  } else if (/^feat/i.test(msg)) {
+	  minor++;
+    patch = 0;
+  } else if (/^fix/i.test(msg)) {
+	  patch++;
+  } else {
+	  return null;
+  }
 
   return `v${major}.${minor}.${patch}`;
 }
